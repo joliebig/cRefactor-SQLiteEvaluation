@@ -27,7 +27,6 @@ outTime="$outBase.time"
 	--include $ABSPATH/partial_configuration.h \
 	--parserstatistics \
 	--writePI \
-	--dumpcfg \
 	$FNAME \
 	2> "$outErr" | tee "$outDbg"
 

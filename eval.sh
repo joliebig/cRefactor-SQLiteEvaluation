@@ -13,7 +13,7 @@ outErr="$outBase.err"
 outTime="$outBase.time"
 
 
-../TypeChef/typechef.sh \
+../TypeChef/cRefactor.sh \
         --bdd --serializeAST --interface --debugInterface\
         -I /usr/local/include \
         -I /usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed \
@@ -26,8 +26,7 @@ outTime="$outBase.time"
         --typeSystemFeatureModelDimacs $ABSPATH/sqlite.dimacs \
         --include $ABSPATH/partial_configuration.h \
         --parserstatistics \
-        --writePI \
-        --dumpcfg \
+        --writePI --prettyPrint \
         $FNAME \
         2> "$outErr" | tee "$outDbg"
 
