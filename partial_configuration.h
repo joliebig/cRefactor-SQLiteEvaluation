@@ -80,3 +80,6 @@
 #if defined(SQLITE_THREADSAFE)
     #define SQLITE_THREADSAFE 1
 #endif
+
+# causes several type errors
+#undef NDEBUG

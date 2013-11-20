@@ -13,7 +13,7 @@ outErr="$outBase.err"
 outTime="$outBase.time"
 
 
-../../TypeChef/typechef.sh \
+../TypeChef/typechef.sh \
 	--bdd \
 	-I /usr/local/include \
 	-I /usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed \
@@ -27,8 +27,10 @@ outTime="$outBase.time"
 	--include $ABSPATH/partial_configuration.h \
 	--parserstatistics \
 	--writePI \
+	--typecheck \
 	$FNAME \
 	2> "$outErr" | tee "$outDbg"
+	#-U NDEBUG \
 
 cat $outErr
 
