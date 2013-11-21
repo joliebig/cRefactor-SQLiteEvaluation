@@ -7,8 +7,12 @@
 // sqlite3.c line 9481
 #define SQLITE_OS_WIN 0
 
+// since we want to build sqlite for linux, turn all other os off
+#define OS_VXWORKS 0
 #define SQLITE_OTHER_OS 0
+#define __OpenBSD__ 0
 #define SQLITE_OS_UNIX 1
+
 
 // lexer error malloc/malloc.h not found
 // sqlite3.c line 15528
@@ -86,3 +90,5 @@
 
 // causes several type errors
 #undef NDEBUG
+
+#undef SQLITE_DEBUG
